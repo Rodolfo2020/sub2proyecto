@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Naves</title>
+</head>
+<body>
+<p id="puntos">Puntos: 0</p>
+<p id="vidas">Vidas: </p>
+<canvas id="canvas"></canvas>
+<div id="finJuego" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Fin del juego</h2>
+        </div>
+        <div class="modal-body">
+            <h3>Top puntuaciones</h3>
+            <ol id="top-rank-players">
+            </ol>
+        </div>
+        <div class="modal-footer">
+            <br>
+            <form action="guardarPuntos.php" method="post" target="_blank" onsubmit="bloquearBotones()">
+                <label for="puntuacion" class="puntuacion">Tu puntuacion: </label>
+                <input id="puntuacion" type="number" name="puntuacion" required readonly><br><br>
+                <label for="nickname">Nickname:</label>
+                <input id="nickname" type="text" maxlength="18" name="nickname" required>
+                <input id="btn-send" type="submit" value="Guardar puntuacion">
+            </form>
+            <br>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
